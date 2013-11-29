@@ -264,12 +264,14 @@ namespace TextBasedAdventureGame
                 Console.WriteLine("Talk to Workers");
                 Console.WriteLine("Talk to Man");
                 Console.WriteLine("Search Rocks");
-                Console.WriteLine("Take pickaxe");
+                Console.WriteLine("Take PICKAXE");
                 Console.WriteLine("Leave");
                 string input = Console.ReadLine();
                 switch (input)
                 {
                     case "Talk to Workers":
+                    case "Talk to workers":
+                    case "talk to workers":
                         {
                             if (menDead == true)
                             {
@@ -283,6 +285,8 @@ namespace TextBasedAdventureGame
                         }
 
                     case "Talk to Man":
+                    case "talk to man":
+                    case "Talk to man":
                         {
                             if (pickaxe == true)
                             {
@@ -308,6 +312,11 @@ namespace TextBasedAdventureGame
                         }
 
                     case "Take pickaxe":
+                    case "Take Pickaxe":
+                    case "take pickaxe":
+                    case "Take PICKAXE":
+                    case "take PICKAXE":
+                    case "PICKAXE":
                         {
                             Console.WriteLine("You take the pickaxe. It is rather hefty, considering you are so weak and puny.");
                             System.Threading.Thread.Sleep(4000);
@@ -316,6 +325,7 @@ namespace TextBasedAdventureGame
                         }
 
                     case "Leave":
+                    case "leave":
                         {
                             Console.WriteLine("You exit the quarry. On your way back across the river, you lose your rope.");
                             System.Threading.Thread.Sleep(4000);
@@ -400,18 +410,100 @@ namespace TextBasedAdventureGame
 
         private void Blacksmith()
         {
+            bool inBlacksmith = false;
+            bool gotGem = false;
+            bool angryBlacksmith = true;
             Console.Clear();
             Console.WriteLine("You walk through the town and approach the BLACKSMITH's corner, the smell ");
             Console.WriteLine("of hot metal and smoke destroy the previous smell of baked goods from your ");
             Console.WriteLine("nostrils. You walk up to the BLACKSMITH and he glares at you with his one ");
             Console.WriteLine("eye, the other eye is covered with an eye patch from a recent accident.");
             Console.WriteLine("The BLACKSMITH grumbly asks you what you want.\n");
-            Console.WriteLine("What do you choose to do?");
-            Console.WriteLine("Go to the TOWN.");
-            Console.WriteLine("Tell the BLACKSMITH you don't like his face.");
-            Console.WriteLine("Ask the BLACKSMITH if he can help you save the PRINCESS.");
-            Console.WriteLine("Look around.");
-            Console.WriteLine("Check Inventory.");
+            while (inBlacksmith == true)
+            {
+                Console.WriteLine("What will you do?\n");
+
+                Console.WriteLine("Tell the BLACKSMITH you don't like his face");
+                Console.WriteLine("Talk to Blacksmith");
+                Console.WriteLine("Look around");
+                Console.WriteLine("Check INVENTORY");
+                Console.WriteLine("Go to the TOWN");
+                string input = Console.ReadLine();
+
+                switch (input)
+                {
+                        //You are an idiot. Have fun dying
+                    case "Tell the BLACKSMITH you don't like his face":
+                    case "Tell the Blacksmith you don't like his face":
+                    case "tell the blacksmith you dont like his face":
+                    case "tell the blacksmith you don't like his face":
+                        {
+                            Console.Clear();
+                            Console.WriteLine("The already miserable blacksmith, insulted by your words, is clearly not happy.He hurls his white-hot hammer across the room,\n and the hammer-head collides with your forehead, cracking your head wide open. ");
+                            System.Threading.Thread.Sleep(4000);
+                            inBlacksmith = false;
+                            gameOver();
+                            break;
+                        }
+
+                        //Got the gem? He lets you keep it
+                    case "Talk to Blacksmith":
+                    case "Talk to blacksmith":
+                    case "talk to Blacksmith":
+                    case "talk to blacksmith":
+                        {
+                            Console.WriteLine("");
+                            break;
+                        }
+
+                        //You find a gem. Its pretty
+                    case "look around":
+                    case "Look around":
+
+                        {
+
+                            Console.WriteLine("You take a look around the blacksmith's workplace.\n After rudely sifting through various piles of stuff, you find a large, shiny gemstone.\nYou take it.");
+                            
+                            break;
+                        }
+
+                        //You check your stuff
+                    case "Check INVENTORY":
+                    case "Check inventory":
+                    case "Check Inventory":
+                    case "check INVENTORY":
+                        {
+
+                            break;
+                        }
+
+                        //Got the gem? If you didnt talk to the blacksmith after finding it, he kills you. Otherwise you're fine
+                    case "Go to the TOWN":
+                    case "go to the town":
+                    case "go to the Town":
+                    case "go to the TOWN":
+                    case "Go to the Town":
+                    case "Go to the town":
+                        {
+                            if (angryBlacksmith == true)
+                            {
+                                Console.WriteLine("You attempt to leave with the gem in hand when the blacksmith accuses you of theivery, which you are guilty of.\n He hurls a spear across the room, impaling your weak body.");
+                                System.Threading.Thread.Sleep(4000);
+                                gameOver();
+                                inBlacksmith = false;
+                                break;
+                            }
+                            else
+                            {
+                                Town();
+                                inBlacksmith = false;
+                                break;
+                            }
+                        }
+
+
+                }
+            }
         }
 
         private void Tavern()
@@ -425,7 +517,6 @@ namespace TextBasedAdventureGame
             while (inTavern == true)
             {
                 Console.WriteLine("What will you do?\n");
-
                 Console.WriteLine("Fight Man");
                 Console.WriteLine("Talk to Man");
                 Console.WriteLine("Drink with Man");
@@ -436,6 +527,8 @@ namespace TextBasedAdventureGame
                 switch (input)
                 {
                     case "Fight Man":
+                    case "Fight man":
+                    case "fight man":
                         {
                             Console.WriteLine("You point to the man and challenge his manliness.He immediately gets up,\nbrandishes an large axe, and removes your head from your shoulders.");
                             System.Threading.Thread.Sleep(3000);
@@ -444,6 +537,8 @@ namespace TextBasedAdventureGame
                             break;
                         }
                     case "Talk to Man":
+                    case "talk to man":
+                    case "Talk to man":
                         {
                             Console.WriteLine("You approach the man and attempt to initiate a meaningful conversation...\n");
                             if (broseph > 1)
@@ -464,6 +559,8 @@ namespace TextBasedAdventureGame
                             }
                         }
                     case "Drink with Man":
+                    case "drink with man":
+                    case "Drink with man":
                         {
                             Console.WriteLine("You walk up to the bar and order a drink for the man with the fine,\n sculpted muscles. He gives you a heavy pat on the back and thanks you.");
                             broseph += 1;
@@ -472,6 +569,7 @@ namespace TextBasedAdventureGame
                         }
 
                     case "Leave":
+                    case "leave":
                         {
                             Console.Clear();
                             inTavern = false;
