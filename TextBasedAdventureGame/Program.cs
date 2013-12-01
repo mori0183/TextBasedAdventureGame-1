@@ -178,10 +178,22 @@ namespace TextBasedAdventureGame
                     River();
                     break;
 
+                case "QUARRY":
+                case "GO TO QUARRY":
+                case "GO TO THE QUARRY":
+                    Quarry();
+                    break;
+
                 case "FOREST":
                 case "GO TO FOREST":
                 case "GO TO THE FOREST":
                     Forest();
+                    break;
+
+                case "CASTLE":
+                case "GO TO CASTLE":
+                case "GO TO THE CASTLE":
+                    Castle();
                     break;
 
                 case "EXIT":
@@ -588,10 +600,10 @@ namespace TextBasedAdventureGame
         private void Castle()
         {
             Console.Clear();
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
+            Console.WriteLine("You unlock the gates and they open slow, but steadily. You walk up to the castle ");
+            Console.WriteLine("door and knock using the skull door knocker. You can hear the sound echoing behind ");
+            Console.WriteLine("the door. The door suddenly swings open and a cold wind blows past you from inside. ");
+            Console.WriteLine(" ");
             Console.WriteLine("");
         }
 
