@@ -89,14 +89,14 @@ namespace TextBasedAdventureGame
             Console.Clear();
 
             Console.Clear();
-            Console.WriteLine("          Welcome to FAIL QUEST.\nThis text based adventure will test your failure awesomenessness.\n\nYou have just exited the TOWN of Shmagma, ");
+            Console.WriteLine("          Welcome to FAIL QUEST.\nThis text based adventure will test your failure awesomenessness.\n\nYou have just exited the TOWN of Seckly, ");
             Console.WriteLine("it is a hot summer day with a nice cool wind blowing east and everything is ");
             Console.WriteLine("perfect. All of a sudden a shriek comes from the north east of your position.");
             Console.WriteLine("Quickly you spin around and witness a massive DEMON carring a princess to the ");
             Console.WriteLine("castle behind the TOWN you just left.");
             Console.WriteLine("You feel you must do what you can to save the princess from her fate,\nbut you must aquire itams to aid you on your quest.");
             Console.WriteLine("You are facing a path that leads to a beautiful FIELD of tall grass.");
-            Console.WriteLine("Behind you is the TOWN of Shmagma from which you have just exited.\n");
+            Console.WriteLine("Behind you is the TOWN of Seckly from which you have just exited.\n");
             Console.WriteLine("What do you choose to do?");
             Console.WriteLine("Go to the TOWN.");
             Console.WriteLine("Go to the FIELD.");
@@ -169,7 +169,7 @@ namespace TextBasedAdventureGame
                 case "FIELD":
                 case "GO TO FIELD":
                 case "GO TO THE FIELD":
-                    FieldOfShit();
+                    Field();
                     break;
 
                 case "RIVER":
@@ -231,12 +231,17 @@ namespace TextBasedAdventureGame
             }
         }
 
-        private void FieldOfShit()
+        private void Field()
         {
             Console.Clear();
-            Console.WriteLine("As you approach the field you notice a fairly recognizable smell");
-            Console.WriteLine("You realize it is the smell of feces, but you are unable to ");
-            Console.WriteLine("Identify the origins of what it came from.");
+            Console.WriteLine("As you approach the field you take a deep breath, the fresh air ");
+            Console.WriteLine("is relaxing and reminds you of home. The field is covered in daisies, ");
+            Console.WriteLine("dandy lions and other miscellaneous flowers. Insects roam the tops of ");
+            Console.WriteLine("flowers pollinating, while dragon flies go through their ranks. It is ");
+            Console.WriteLine("quite peaceful so you stand and relish in the harmonious atmoshoere. ");
+            Console.WriteLine("As you come back to reality you are unsure of the time lost and decide ");
+            Console.WriteLine("it's time to continue your quest. You gaze across the field. ");
+            Console.WriteLine("Looking across the field, you can see a paths leading East, South and West.");
             Console.WriteLine("To the east lies the RIVER,\nto the south, the MILL,\nand to the west is the FOREST.\n");
             Console.WriteLine("What do you choose to do?");
             Console.WriteLine("Go to the RIVER.");
@@ -250,8 +255,14 @@ namespace TextBasedAdventureGame
         {
             Console.Clear();
 
-            Console.WriteLine("You approach the river with caution as the rapids could easily pull you");
-            Console.WriteLine(" in and make short work of you. A ROPE could be quite handy right now...\n");
+            Console.WriteLine("Walking down the path you begin to hear rushing water. As you get ");
+            Console.WriteLine("closer the rushing water sounds dangerous. You come out of the woods ");
+            Console.WriteLine("and you can finally see the river. The river is flowing at lethal ");
+            Console.WriteLine("speed, rapids and white caps deter from trying to cross it. You see ");
+            Console.WriteLine("a couple of makeshift tomb stones and this makes the river seem even ");
+            Console.WriteLine("more daunting. You can see a tree with a rope that had been cut or ");
+            Console.WriteLine("snapped on the other side of the river. You think to yourself \"A ");
+            Console.WriteLine(" ROPE would be quite handy right now.\".");
             Console.WriteLine("What do you choose to do?");
             Console.WriteLine("Go to the FIELD.");
             Console.WriteLine("Go to the QUARRY.");
@@ -603,7 +614,13 @@ namespace TextBasedAdventureGame
             Console.WriteLine("You unlock the gates and they open slow, but steadily. You walk up to the castle ");
             Console.WriteLine("door and knock using the skull door knocker. You can hear the sound echoing behind ");
             Console.WriteLine("the door. The door suddenly swings open and a cold wind blows past you from inside. ");
-            Console.WriteLine(" ");
+            Console.WriteLine("The wind is cold and smells of rotton corpses. You muster the courage and enter the ");
+            Console.WriteLine("castle. When you enter you can see the main hall and the dusty dinning table ");
+            Console.WriteLine("indicating the lack of use for a long period of time. Suddenly a shriek coming from  ");
+            Console.WriteLine("up stairs startles you. You sprint up the stairs and you see a door with a light ");
+            Console.WriteLine("source coming from the bottom of the door. You run to the door and barge in. You see ");
+            Console.WriteLine("the DEMON from the beginning of the game. It smirkingly glares at you as if it was ");
+            Console.WriteLine("expecting you. ");
             Console.WriteLine("");
         }
 
