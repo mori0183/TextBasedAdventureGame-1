@@ -379,6 +379,26 @@ namespace TextBasedAdventureGame
             Console.WriteLine("Open the CHEST.");
             Console.WriteLine("Look around.");
             Console.WriteLine("Check Inventory.");
+            string input = Console.ReadLine();
+
+            switch (input)
+            {
+                case "Open the chest":
+                    if(you got da key nigga)
+                    {
+                        //OPEN DAT MUFUCKIN CHIEST
+                        Chest();
+                        break;
+                    }
+            }
+        }
+
+        private void Chest()
+        {
+            Console.Clear();
+            Console.WriteLine("You find a gypsy and a rope");
+            Console.ReadLine();
+            Mill();
         }
 
         private void Forest()
