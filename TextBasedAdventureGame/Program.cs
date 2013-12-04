@@ -379,18 +379,18 @@ namespace TextBasedAdventureGame
             Console.WriteLine("Open the CHEST.");
             Console.WriteLine("Look around.");
             Console.WriteLine("Check Inventory.");
-            string input = Console.ReadLine();
+            //string input = Console.ReadLine();
 
-            switch (input)
-            {
-                case "Open the chest":
-                    if(you got da key nigga)
-                    {
-                        //OPEN DAT MUFUCKIN CHIEST
-                        Chest();
-                        break;
-                    }
-            }
+            //switch (input)
+            //{
+            //    case "Open the chest":
+            //        if(you got da key nigga)
+            //        {
+            //            //OPEN DAT MUFUCKIN CHIEST
+            //            Chest();
+            //            break;
+            //        }
+            //}
         }
 
         private void Chest()
@@ -630,18 +630,75 @@ namespace TextBasedAdventureGame
 
         private void Castle()
         {
+            bool enchantedHammer = true;
             Console.Clear();
-            Console.WriteLine("You unlock the gates and they open slow, but steadily. You walk up to the castle ");
-            Console.WriteLine("door and knock using the skull door knocker. You can hear the sound echoing behind ");
-            Console.WriteLine("the door. The door suddenly swings open and a cold wind blows past you from inside. ");
-            Console.WriteLine("The wind is cold and smells of rotton corpses. You muster the courage and enter the ");
-            Console.WriteLine("castle. When you enter you can see the main hall and the dusty dinning table ");
-            Console.WriteLine("indicating the lack of use for a long period of time. Suddenly a shriek coming from  ");
-            Console.WriteLine("up stairs startles you. You sprint up the stairs and you see a door with a light ");
-            Console.WriteLine("source coming from the bottom of the door. You run to the door and barge in. You see ");
-            Console.WriteLine("the DEMON from the beginning of the game. It smirkingly glares at you as if it was ");
-            Console.WriteLine("expecting you. ");
-            Console.WriteLine("");
+            Console.WriteLine("You unlock the gates and they open slow, but steadily. You walk up to the castle");
+            Console.WriteLine("door and knock using the skull door knocker. You can hear the sound echoing ");
+            Console.WriteLine("behind the door. The door suddenly swings open and a cold wind blows past you ");
+            Console.WriteLine("from inside. The wind is cold and smells of rotton corpses. You muster the ");
+            Console.WriteLine("courage and enter the castle. When you enter you can see the main hall and the ");
+            Console.WriteLine("dusty dinning table, indicating the lack of use for a long period of time. ");
+            Console.WriteLine("Suddenly a shriek coming from up stairs startles you. You sprint up the stairs and");
+            Console.WriteLine("you see a door with a light source coming from the bottom of the door. You run to ");
+            Console.WriteLine("the door and barge in. You seethe DEMON from the beginning of the game. It ");
+            Console.WriteLine("smirkingly glares at you as if it was expecting you. ");
+            Console.WriteLine("What do you choose to do?");
+            Console.WriteLine("Challenge the DEMON toa duel, YU GI OH style!");
+            Console.WriteLine("Bitch slap the DEMON and take the princess home to make sticky.");
+            Console.WriteLine("Look around.");
+            Console.WriteLine("Check Inventory.");
+            string input = Console.ReadLine();
+
+
+            switch (input.ToUpper())
+            {
+                case "CHALLENGE DEMON":
+                    Console.WriteLine("The Demon laughs at you, then bites your head off!");
+                    gameOver();
+                    break;
+
+                case "HAMMER":
+                    if (enchantedHammer == true)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("You throw the hammer at the DEMON, it catches the HAMMER ");
+                        Console.WriteLine("and throws it back at you. You explode.");
+                        gameOver();
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("You do not possess the HAMMER.");
+                        Castle();
+                        break;
+                    }
+
+                case "BITCH SLAP THE DEMON":
+                case "SLAP DEMON":
+                    Console.Clear();
+                    Console.WriteLine("You bitch slap the DEMON, point your finger at it and growl ");
+                    Console.WriteLine("NO!, BAD DEMON! The DEMON bows it's head in shame and flies ");
+                    Console.WriteLine("away.");
+                    System.Threading.Thread.Sleep(4000);
+                    gameWin();
+                    break;
+            }
+        }
+
+        private void gameWin()
+        {
+            Console.Clear();
+            Console.WriteLine("You have defeated the DEMON and rescued the princess from her grizzly fate. ");
+            Console.WriteLine("YAY!");
+            Console.WriteLine("          _______                     _________ _       ");
+            Console.WriteLine("|\\     /|(  ___  )|\\     /|  |\\     /|\\__   __/( (    /|");
+            Console.WriteLine("( \\   / )| (   ) || )   ( |  | )   ( |   ) (   |  \\  ( |");
+            Console.WriteLine(" \\ (_) / | |   | || |   | |  | | _ | |   | |   |   \\ | |");
+            Console.WriteLine("  \\   /  | |   | || |   | |  | |( )| |   | |   | (\\ \\) |");
+            Console.WriteLine("   ) (   | |   | || |   | |  | || || |   | |   | | \\   |");
+            Console.WriteLine("   | |   | (___) || (___) |  | () () |___) (___| )  \\  |");
+            Console.WriteLine("   \\_/   (_______)(_______)  (_______)\\_______/|/    )_)");
         }
 
         private void gameOver()
